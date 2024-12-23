@@ -10,6 +10,8 @@ func main() {
 	router.GET("/products", controllers.GetProducts)
 	router.GET("/products/:id", controllers.GetProductById)
 	router.POST("/products", controllers.AddProduct)
+	router.PUT("/products/:id", controllers.UpdateProduct)
+	router.DELETE("/products/:id", controllers.DeleteProduct)
 
 	router.Run("localhost:8080")
 }
